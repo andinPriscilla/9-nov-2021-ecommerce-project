@@ -1,4 +1,4 @@
-import {Link, NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo2 from '../assets/logo2.png'
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
                 <NavLink to='/home'><li>Home</li></NavLink>
                 <NavLink to='/products'><li>Products</li></NavLink>
                 <NavLink to='/cart'><li>Cart</li></NavLink>
-                
+
             </ul>
         </header>
     )
