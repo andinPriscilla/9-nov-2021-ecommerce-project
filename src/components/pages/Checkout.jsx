@@ -4,15 +4,16 @@ import MyContext from '../../context/MyContext'
 
 const Checkout = () => {
     const context = useContext(MyContext)
-    const { cart, removeItem,  decrementItem,totalCalc} = context
+    const { cart, totalCalc} = context
     return (
         <div>
-            <h1>CHECKOUT</h1>
+            <h1 style={{color:"red",textAlign:"center",paddingTop:"20px"}}>CHECKOUT</h1>
             {cart.map((item) => (
-                <div key={item.id}>
-                    <h3>{item.name}</h3>
-                    <p> Item price{item.price * item.quantity}</p>
-                    <span>Item quantity{item.quantity}</span>
+                <div  key={item.id} style={{textAlign:"center"}}>
+                    <h3 style={{fontSize:"20px"}}>{item.name}</h3>
+                    <span>Quantity :{item.quantity}</span>
+                    <p>Price :{item.price * item.quantity}</p>
+                    
 
 
                 </div>

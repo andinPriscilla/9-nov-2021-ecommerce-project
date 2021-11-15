@@ -13,11 +13,11 @@ const Cart = () => {
         } 
 
     return (
-        <div className="cart">
-            {cart.length === 0 ? <p>there is no item in your cart</p> : cart.map((item) =>
-                <section key={item.id}>
-                    <p>{item.name}</p>
-                    <p>{item.price}</p>
+        <section className="cart">
+            {cart.length === 0 ? <p style={{color:"brown",textAlign:"center",fontSize:"40px", paddingTop:"10%"}}>There is no item in your cart</p> : cart.map((item) =>
+                <div key={item.id}>
+                    <p style={{color:"brown",textAlign:"center",fontSize:"30px", paddingTop:"1"}}>{item.name}</p>
+                    <p>{item.price} $</p>
                     <img src={item.image_link} alt="cartItem" />
                     <p>{item.quantity}</p>
                     <button onClick={() => addToCart(item)}>+</button>
@@ -26,13 +26,14 @@ const Cart = () => {
                     &nbsp;
                     <button onClick={() => removeItem(item)}>Remove Item</button>
 
-                    <div className="total" >
-                        <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
-                        <button onClick={() => checkAndNavigate()}>checkout</button>
-                    </div>
-                </section>
+                    
+                </div>
             )}
-        </div>
+            <div className="total" >
+                        <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
+                        {cart.length > 0 && <button onClick={() => checkAndNavigate()}>checkout</button>}
+                    </div>
+        </section>
     )
 }
 

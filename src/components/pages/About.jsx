@@ -14,7 +14,7 @@ const About = () => {
 
         In 1967, the company was sold by Williams to Plough Inc. (now Schering-Plough) in Memphis, Tennessee. The entire cosmetic production facility was moved from Chicago to Memphis over one weekend. In 1975, the company moved to Little Rock, Arkansas, where it is still located. In 1990, Schering-Plough sold Maybelline to a New York investment firm, Wasserstein Perella & Co. Maybelline’s headquarters remained in Memphis until its acquisition by L'Oréal in 1996. Its headquarters was then moved to New York City in 1996 and its factory to Brooklyn in 2000.
       </p>
-      <Link to="/products">click me</Link>
+      <Link to="/products" className="link">click me</Link>
     </section>
   );
 };
